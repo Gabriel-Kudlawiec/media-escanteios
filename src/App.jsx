@@ -156,7 +156,7 @@ for (const jogo of jogosVisitante) {
               {palpites.map((palpite, index) => (
                 <div
                   key={index}
-                  className={`p-4 rounded-lg flex justify-between items-center ${index === 2 ? 'bg-green-700' : 'bg-gray-800'}`}
+                  className={`p-4 rounded-lg flex justify-between items-center ${index === 1 ? 'bg-green-700' : 'bg-gray-800'}`}
                 >
                   <span className="text-gray-400 text-sm">#{index + 1}</span>
                   <span className="text-white font-bold text-lg">

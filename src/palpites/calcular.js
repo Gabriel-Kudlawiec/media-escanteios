@@ -8,15 +8,13 @@ export function calcularMedia(escanteiosPorJogo) {
   return parseFloat(media.toFixed(1))
 }
 
-// Gera 5 palpites baseado nas médias dos dois times
+// Gera 3 palpites baseado nas médias dos dois times
 export function gerarPalpites(mediaMandante, mediaVisitante) {
   const previsaoBase = mediaMandante + mediaVisitante
 
   return [
     { mandante: Math.round(mediaMandante + 1), visitante: Math.round(mediaVisitante + 1), total: Math.round(previsaoBase + 2) },
-    { mandante: Math.round(mediaMandante + 0.5), visitante: Math.round(mediaVisitante + 0.5), total: Math.round(previsaoBase + 1) },
     { mandante: Math.round(mediaMandante), visitante: Math.round(mediaVisitante), total: Math.round(previsaoBase) },
-    { mandante: Math.round(mediaMandante - 0.5), visitante: Math.round(mediaVisitante - 0.5), total: Math.round(previsaoBase - 1) },
     { mandante: Math.round(mediaMandante - 1), visitante: Math.round(mediaVisitante - 1), total: Math.round(previsaoBase - 2) },
   ]
 }
